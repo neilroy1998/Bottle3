@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="alto">#D9D9D9</color>
+    <color name="sangria">#8d000b</color>
+    <color name="mine_shaft">#303030</color>
+    <color name="cod_gray">#1d1d1d</color>
+
+</resources>
