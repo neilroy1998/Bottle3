@@ -1,34 +1,20 @@
 package com.example.bottle2;
 
-import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewParent;
-import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.List;
-
-
-public class tasksFrag extends Fragment {
+public class tasks_for_me extends Fragment {
     private OnFragmentInteractionListener mListener;
 
-    private TabLayout tabLayout;
+    public tasks_for_me() {}
 
-    public tasksFrag() {}
-
-    public static tasksFrag newInstance(String param1, String param2) {
-        tasksFrag fragment = new tasksFrag();
+    public static tasks_for_me newInstance(String param1, String param2) {
+        tasks_for_me fragment = new tasks_for_me();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -37,19 +23,15 @@ public class tasksFrag extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view =  inflater.inflate(R.layout.fragment_tasks, container, false);
-
-
-        return view;
+        return inflater.inflate(R.layout.fragment_tasks_for_me, container, false);
     }
-
-
-
 
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {

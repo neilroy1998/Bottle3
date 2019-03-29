@@ -40,11 +40,11 @@
                 android:textSize="36sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/member_position"
+                app:layout_constraintStart_toEndOf="@+id/tv_team_desc"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/member_position"
+                android:id="@+id/tv_team_desc"
                 android:layout_width="144dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_thin"

@@ -17,7 +17,7 @@
         android:layout_marginBottom="2dp"
         android:padding="10dp"
         app:cardBackgroundColor="@color/mine_shaft"
-        app:cardCornerRadius="32dp"
+        app:cardCornerRadius="16dp"
         tools:layout_editor_absoluteX="5dp"
         tools:layout_editor_absoluteY="5dp">
 
@@ -26,58 +26,32 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/member_image"
-                android:layout_width="match_parent"
-                android:layout_height="96dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:src="@drawable/blank"
-                app:civ_border_color="#FF000000"
-                app:civ_border_width="2dp"
-                app:layout_constraintCircleRadius="10dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_gravity = "center"
-                />
-
             <TextView
-                android:id="@+id/member_name"
+                android:id="@+id/tv_team_Name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_bold"
                 android:text="Name Abcd"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="24sp"
-                android:layout_below="@+id/member_image"/>
+                android:textSize="24sp"/>
 
             <TextView
-                android:id="@+id/member_position"
+                android:id="@+id/tv_team_desc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_team_Name"
                 android:fontFamily="@font/roboto_thin"
                 android:text="Position"
-                android:textAlignment="center"
+                android:paddingVertical="16dp"
+                android:paddingHorizontal="16dp"
+                android:textAlignment="viewStart"
                 android:textColor="@color/white"
-                android:layout_below="@+id/member_name"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/member_prcnt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/member_position"
-                android:fontFamily="@font/roboto_light"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                android:paddingTop="8dp"
-                android:text="TextView" />
+                android:textSize="20sp" />
 
 
         </RelativeLayout>
 
     </android.support.v7.widget.CardView>
-    >
+
 </RelativeLayout>

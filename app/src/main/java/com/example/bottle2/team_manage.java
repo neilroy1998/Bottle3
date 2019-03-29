@@ -2,57 +2,37 @@ package com.example.bottle2;
 
 public class team_manage {
 
-    private int memID;
-    private String memName;
-    private String memPos;
-    private String memPrcnt;
-    private int memImg;
+    private int teamID;
+    private String teamName;
+    private String teamDesc;
 
-    public team_manage(int memID, String memName, String memPos, String memPrcnt, int memImg) {
-        this.memID = memID;
-        this.memName = memName;
-        this.memPos = memPos;
-        this.memPrcnt = memPrcnt;
-        this.memImg = memImg;
+    public team_manage(int teamID, String teamName, String teamDesc) {
+        this.teamID = teamID;
+        this.teamName = teamName;
+        this.teamDesc = teamDesc;
     }
 
-    public int getMemID() {
-        return memID;
+    public int getteamID() {
+        return teamID;
     }
 
-    public void setMemID(int memID) {
-        this.memID = memID;
+    public void setteamID(int teamID) {
+        this.teamID = teamID;
     }
 
-    public String getMemName() {
-        return memName;
+    public String getteamName() {
+        return teamName;
     }
 
-    public void setMemName(String memName) {
-        this.memName = memName;
+    public void setteamName(String teamName) {
+        this.teamName = teamName;
     }
 
-    public String getMemPos() {
-        return memPos;
+    public String getTeamDesc() {
+        return teamDesc;
     }
 
-    public void setMemPos(String memPos) {
-        this.memPos = memPos;
-    }
-
-    public String getMemPrcnt() {
-        return memPrcnt;
-    }
-
-    public void setMemPrcnt(String memPrcnt) {
-        this.memPrcnt = memPrcnt;
-    }
-
-    public int getMemImg() {
-        return memImg;
-    }
-
-    public void setMemImg(int memImg) {
-        this.memImg = memImg;
+    public void setTeamDesc(String teamDesc) {
+        this.teamDesc = teamDesc;
     }
 }

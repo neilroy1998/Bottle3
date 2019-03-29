@@ -48,7 +48,7 @@ public class teamFrag extends Fragment {
         mem_list = new ArrayList<>();
         teamAdapter = new team_adapter(getActivity(), mem_list);
 
-        RecyclerView.LayoutManager lm = new GridLayoutManager(getActivity(), 2);
+        RecyclerView.LayoutManager lm = new GridLayoutManager(getActivity(), 1);
         recyclerView.setLayoutManager(lm);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(teamAdapter);
@@ -66,31 +66,13 @@ public class teamFrag extends Fragment {
         int imgSrc;
         team_manage tm;
 
-        tm = new team_manage(1, "Alpha", "CEO", "85", R.drawable.blank);
+        tm = new team_manage(1, "Alpha", "I would have gotten the promotion, but my attendance wasn’t good enough");
         mem_list.add(tm);
 
-        tm = new team_manage(1, "Alpha", "CEO", "85", R.drawable.blank);
+        tm = new team_manage(2, "Beta", "They got there early, and they got really good seats");
         mem_list.add(tm);
 
-        tm = new team_manage(1, "Alpha", "CEO", "85", R.drawable.blank);
-        mem_list.add(tm);
-
-        tm = new team_manage(1, "Alpha", "CEO", "85", R.drawable.blank);
-        mem_list.add(tm);
-
-        tm = new team_manage(1, "Alpha", "CEO", "85", R.drawable.blank);
-        mem_list.add(tm);
-
-        tm = new team_manage(1, "Alpha", "CEO", "85", R.drawable.blank);
-        mem_list.add(tm);
-
-        tm = new team_manage(1, "Alpha", "CEO", "85", R.drawable.blank);
-        mem_list.add(tm);
-
-        tm = new team_manage(1, "Alpha", "CEO", "85", R.drawable.blank);
-        mem_list.add(tm);
-
-        tm = new team_manage(1, "Alpha", "CEO", "85", R.drawable.blank);
+        tm = new team_manage(3, "Gamma", "The quick brown fox jumps over the lazy dog");
         mem_list.add(tm);
 
         teamAdapter.notifyDataSetChanged();
@@ -123,5 +105,9 @@ public class teamFrag extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    public void add_teams(View v) {
+
     }
 }

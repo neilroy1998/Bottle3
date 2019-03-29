@@ -8,7 +8,7 @@
     android:background="@color/cod_gray">
 
     <TextView
-        android:id="@+id/tv_workspace"
+        android:id="@+id/tv_teams"
         android:layout_width="267dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

@@ -48,7 +48,7 @@ public class categories_adapter extends RecyclerView.Adapter<categories_adapter.
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             cat = (TextView) itemView.findViewById(R.id.cat_cat);
-            prcnt = (TextView) itemView.findViewById(R.id.member_position);
+            prcnt = (TextView) itemView.findViewById(R.id.tv_team_desc);
         }
     }
 

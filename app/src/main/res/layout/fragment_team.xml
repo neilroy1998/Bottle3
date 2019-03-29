@@ -7,93 +7,46 @@
     android:layout_height="wrap_content"
     tools:context=".homeFrag">
 
-    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/team_image"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/blank"
-        app:civ_border_color="#FF000000"
-        app:civ_border_width="2dp"
-        app:layout_constraintCircleRadius="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_teamName"
-        android:layout_width="0dp"
-        android:layout_height="97dp"
-        android:layout_marginStart="32dp"
+    <Button
+        android:id="@+id/button_add_teams"
+        android:layout_width="57dp"
+        android:layout_height="59dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:fontFamily="@font/roboto_bold"
-        android:text="Team Blueberries"
-        android:textAlignment="textEnd"
-        android:textColor="@color/white"
-        android:textSize="32sp"
+        android:background="@drawable/ic_add_white_24dp"
+        android:onClick="add_teams"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/team_image"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_teamDetails"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="@font/roboto_thin"
-        android:text="Find all blueberries\nEat Them All"
-        android:textAlignment="textEnd"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/team_image" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="48dp"
-        android:fontFamily="@font/roboto_bold"
-        android:text="Members"
-        android:textColor="@color/white"
-        android:textSize="42sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_teamDetails" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/team_rv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:paddingBottom="128dp"
         android:scrollbars="vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_teams" />
 
     <TextView
-        android:id="@+id/tv_teamPrcnt"
-        android:layout_width="match_parent"
+        android:id="@+id/tv_teams"
+        android:layout_width="267dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="@font/roboto_thin"
-        android:text="76%"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto_bold"
+        android:maxLines="2"
+        android:scrollHorizontally="false"
+        android:text="Teams"
+        android:textAlignment="viewStart"
         android:textColor="@color/white"
-        android:textAlignment="textEnd"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="42sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_teamDetails" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>

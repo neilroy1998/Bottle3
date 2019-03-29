@@ -35,10 +35,8 @@ public class team_adapter extends RecyclerView.Adapter<team_adapter.MyViewHolder
     public void onBindViewHolder(@NonNull team_adapter.MyViewHolder myViewHolder, int i) {
 
         team_manage teamManage = mem_list.get(i);
-        myViewHolder.mCiv.setImageResource(teamManage.getMemImg());
-        myViewHolder.mName.setText(teamManage.getMemName());
-        myViewHolder.mPos.setText(teamManage.getMemPos());
-        myViewHolder.mPrcnt.setText(teamManage.getMemPrcnt() + "%");
+        myViewHolder.mName.setText(teamManage.getteamName());
+        myViewHolder.mDesc.setText(teamManage.getTeamDesc());
 
     }
 
@@ -49,15 +47,12 @@ public class team_adapter extends RecyclerView.Adapter<team_adapter.MyViewHolder
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView mName, mPos, mPrcnt;
-        public CircleImageView mCiv;
+        public TextView mName, mDesc;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            mCiv = itemView.findViewById(R.id.member_image);
-            mName = itemView.findViewById(R.id.member_name);
-            mPos = itemView.findViewById(R.id.member_position);
-            mPrcnt = itemView.findViewById(R.id.member_prcnt);
+            mName = itemView.findViewById(R.id.tv_team_Name);
+            mDesc = itemView.findViewById(R.id.tv_team_desc);
         }
     }
 }
