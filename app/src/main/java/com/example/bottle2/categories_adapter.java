@@ -33,8 +33,7 @@ public class categories_adapter extends RecyclerView.Adapter<categories_adapter.
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
         categories_manage category = cat_list.get(i);
         myViewHolder.cat.setText(category.getCategoryName());
-        myViewHolder.prcnt.setText(category.getPercent()+"%");
-        myViewHolder.extra.setText(category.getExtras());
+        myViewHolder.prcnt.setText(category.getPercent());
     }
 
     @Override
@@ -50,7 +49,6 @@ public class categories_adapter extends RecyclerView.Adapter<categories_adapter.
             super(itemView);
             cat = (TextView) itemView.findViewById(R.id.cat_cat);
             prcnt = (TextView) itemView.findViewById(R.id.member_position);
-            extra = (TextView) itemView.findViewById(R.id.cat_extra);
         }
     }
 

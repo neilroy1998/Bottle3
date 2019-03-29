@@ -5,13 +5,11 @@ public class categories_manage {
     private int catID;
     private String categoryName;
     private String percent;
-    private String extras;
 
-    public categories_manage(int catID, String categoryName, String percent, String extras) {
+    public categories_manage(int catID, String categoryName, String percent) {
         this.catID = catID;
         this.categoryName = categoryName;
         this.percent = percent;
-        this.extras = extras;
     }
 
     public int getCatID() {
@@ -36,13 +34,5 @@ public class categories_manage {
 
     public void setPercent(String percent) {
         this.percent = percent;
-    }
-
-    public String getExtras() {
-        return extras;
-    }
-
-    public void setExtras(String extras) {
-        this.extras = extras;
     }
 }

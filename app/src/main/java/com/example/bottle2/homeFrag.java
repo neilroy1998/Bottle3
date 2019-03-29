@@ -1,8 +1,11 @@
 package com.example.bottle2;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
@@ -59,13 +62,21 @@ public class homeFrag extends Fragment {
         CircleImageView civ = (CircleImageView) view.findViewById(R.id.team_image);
         civ.setImageResource(R.drawable.profile);
 
-        RecyclerView.LayoutManager lm = new GridLayoutManager(getActivity(), 2);
+        RecyclerView.LayoutManager lm = new GridLayoutManager(getActivity(), 1);
         recyclerView.setLayoutManager(lm);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(cat_adapter);
         recyclerView.setNestedScrollingEnabled(false);
 
         fetch_cat_items();
+
+        civ.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), workspaceActivity.class);
+                startActivity(i);
+            }
+        });
         
         return view;
     }
@@ -74,45 +85,11 @@ public class homeFrag extends Fragment {
 
         cat_list.clear();
 
-        categories_manage cm = new categories_manage(1, "Cat1", Integer.toString(75), "First");
+        categories_manage cm = new categories_manage(1, "Overall\nStatistics", Integer.toString(75));
         cat_list.add(cm);
 
-        cm = new categories_manage(2, "Cat2", Integer.toString(87), "Second");
+        cm = new categories_manage(2, "Other\nStatistics", Integer.toString(87));
         cat_list.add(cm);
-
-        cm = new categories_manage(3, "Cat3", Integer.toString(42), "Third");
-        cat_list.add(cm);
-
-        cm = new categories_manage(3, "Cat3", Integer.toString(42), "Third");
-        cat_list.add(cm);
-
-        cm = new categories_manage(3, "Cat3", Integer.toString(42), "Third");
-        cat_list.add(cm);
-
-        cm = new categories_manage(3, "Cat3", Integer.toString(42), "Third");
-        cat_list.add(cm);
-
-        cm = new categories_manage(3, "Cat3", Integer.toString(42), "Third");
-        cat_list.add(cm);
-
-        cm = new categories_manage(3, "Cat3", Integer.toString(42), "Third");
-        cat_list.add(cm);
-
-        cm = new categories_manage(3, "Cat3", Integer.toString(42), "Third");
-        cat_list.add(cm);
-
-        cm = new categories_manage(3, "Cat3", Integer.toString(42), "Third");
-        cat_list.add(cm);
-
-        cm = new categories_manage(3, "Cat3", Integer.toString(42), "Third");
-        cat_list.add(cm);
-
-        cm = new categories_manage(3, "Cat3", Integer.toString(42), "Third");
-        cat_list.add(cm);
-
-        cm = new categories_manage(3, "Cat3", Integer.toString(42), "Third");
-        cat_list.add(cm);
-
 
         cat_adapter.notifyDataSetChanged();
     }
@@ -145,6 +122,5 @@ public class homeFrag extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
-
 
 }
