@@ -43,7 +43,10 @@ public class tasksFrag extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view =  inflater.inflate(R.layout.fragment_tasks, container, false);
-
+        ViewPager viewPager = view.findViewById(R.id.tasks_viewPager);
+        viewPager.setAdapter(new tasks_viewpager_adapter(getChildFragmentManager()));
+        TabLayout tabLayout = view.findViewById(R.id.tasks_tab_layout);
+        tabLayout.setupWithViewPager(viewPager);
 
         return view;
     }
