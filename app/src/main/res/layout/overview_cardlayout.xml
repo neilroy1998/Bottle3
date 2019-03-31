@@ -3,33 +3,92 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:padding="4dp">
 
     <android.support.v7.widget.CardView
-        android:layout_width="395dp"
+        android:id="@+id/overview_cv"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        app:cardBackgroundColor="@color/mine_shaft"
+        android:layout_gravity="center"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
         android:padding="10dp"
+        app:cardBackgroundColor="@color/mine_shaft"
         app:cardCornerRadius="32dp"
-        android:foregroundGravity="center">
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="5dp">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/member_profile_image"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
-            app:civ_border_width="0dp"
-            app:civ_border_color="#FF000000"/>
+        <RelativeLayout
+            android:id="@+id/overview_rel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/member_image"
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/blank"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp"
+                app:layout_constraintCircleRadius="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_gravity = "center"
+                />
+
+            <TextView
+                android:id="@+id/member_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Good Boy"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:layout_below="@+id/member_image"/>
+
+            <View
+                android:id="@+id/separator"
+                android:layout_width="48dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/member_name"
+                android:background="@android:color/white"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tv_productivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_thin"
+                android:text="@string/productivity"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:layout_below="@+id/separator"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/member_prcnt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_productivity"
+                android:fontFamily="@font/roboto_light"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:text="75"
+                android:layout_marginBottom="12dp"/>
+
+
+        </RelativeLayout>
 
     </android.support.v7.widget.CardView>
+    >
 </RelativeLayout>

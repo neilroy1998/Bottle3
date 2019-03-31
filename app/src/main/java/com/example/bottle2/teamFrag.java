@@ -19,7 +19,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class teamFrag extends Fragment {
 
     private RecyclerView recyclerView;
-    private List<team_manage> mem_list;
+    private List<team_manage> team_list;
     private team_adapter teamAdapter;
 
 
@@ -45,8 +45,8 @@ public class teamFrag extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_team, container, false);
         recyclerView = view.findViewById(R.id.team_rv);
-        mem_list = new ArrayList<>();
-        teamAdapter = new team_adapter(getActivity(), mem_list);
+        team_list = new ArrayList<>();
+        teamAdapter = new team_adapter(getActivity(), team_list);
 
         RecyclerView.LayoutManager lm = new GridLayoutManager(getActivity(), 1);
         recyclerView.setLayoutManager(lm);
@@ -54,26 +54,26 @@ public class teamFrag extends Fragment {
         recyclerView.setAdapter(teamAdapter);
         recyclerView.setNestedScrollingEnabled(false);
 
-        fetch_members();
+        fetch_teams();
 
         return view;
     }
 
-    private void fetch_members() {
+    private void fetch_teams() {
 
-        mem_list.clear();
+        team_list.clear();
 
         int imgSrc;
         team_manage tm;
 
         tm = new team_manage(1, "Alpha", "I would have gotten the promotion, but my attendance wasn’t good enough");
-        mem_list.add(tm);
+        team_list.add(tm);
 
         tm = new team_manage(2, "Beta", "They got there early, and they got really good seats");
-        mem_list.add(tm);
+        team_list.add(tm);
 
         tm = new team_manage(3, "Gamma", "The quick brown fox jumps over the lazy dog");
-        mem_list.add(tm);
+        team_list.add(tm);
 
         teamAdapter.notifyDataSetChanged();
 

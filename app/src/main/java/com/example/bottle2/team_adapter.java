@@ -18,11 +18,11 @@ import static android.support.v4.content.ContextCompat.startActivity;
 public class team_adapter extends RecyclerView.Adapter<team_adapter.MyViewHolder> {
 
     private Context mContext;
-    private List<team_manage> mem_list;
+    private List<team_manage> team_list;
 
-    public team_adapter(Context mContext, List<team_manage> mem_list) {
+    public team_adapter(Context mContext, List<team_manage> team_list) {
         this.mContext = mContext;
-        this.mem_list = mem_list;
+        this.team_list = team_list;
     }
 
     @NonNull
@@ -37,7 +37,7 @@ public class team_adapter extends RecyclerView.Adapter<team_adapter.MyViewHolder
     @Override
     public void onBindViewHolder(@NonNull final team_adapter.MyViewHolder myViewHolder, int i) {
 
-        final team_manage teamManage = mem_list.get(i);
+        final team_manage teamManage = team_list.get(i);
         myViewHolder.mName.setText(teamManage.getteamName());
         myViewHolder.mDesc.setText(teamManage.getTeamDesc());
 
@@ -55,7 +55,7 @@ public class team_adapter extends RecyclerView.Adapter<team_adapter.MyViewHolder
 
     @Override
     public int getItemCount() {
-        return mem_list.size();
+        return team_list.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
