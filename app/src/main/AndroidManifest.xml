@@ -5,11 +5,12 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="Bottle?"
+        android:label="Bottle"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".workspaceActivity"></activity>
+        <activity android:name=".teamOverviewActivity"></activity>
+        <activity android:name=".workspaceActivity" />
         <activity
             android:name=".MainActivity"
             android:label="Bottle?"
