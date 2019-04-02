@@ -7,13 +7,12 @@
     android:layout_height="match_parent"
     tools:context=".tasks_by_me">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="355dp"
-        android:text="By Me"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/tasks_by_me_rv"
+        android:layout_width="match_parent"
+        android:layout_height="715dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

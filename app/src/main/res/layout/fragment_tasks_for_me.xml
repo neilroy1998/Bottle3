@@ -7,13 +7,13 @@
     android:layout_height="match_parent"
     tools:context=".tasks_for_me">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="292dp"
-        android:text="For Me"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/tasks_for_me_rv"
+        android:layout_width="match_parent"
+        android:layout_height="715dp"
+        android:layout_marginTop="8dp"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
