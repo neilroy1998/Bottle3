@@ -62,10 +62,10 @@ public class teamOverview_Overview extends Fragment {
 
     overview_members_manage omm;
 
-    omm = new overview_members_manage(1, 75, R.drawable.blank, "Frank Ocean");
+    omm = new overview_members_manage(1, 75, R.drawable.blank, "Frank Ocean", "Aye LOL");
     mem_list.add(omm);
 
-    omm = new overview_members_manage(2, 84, R.drawable.blank, "Bon Iver");
+    omm = new overview_members_manage(2, 84, R.drawable.blank, "Bon Iver", "Hmph");
     mem_list.add(omm);
 
     mem_adapter.notifyDataSetChanged();

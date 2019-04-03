@@ -1,6 +1,7 @@
 package com.example.bottle2;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -32,11 +33,23 @@ public class tasks_by_me_adapter extends RecyclerView.Adapter<tasks_by_me_adapte
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
 
-        final tasks_by_me_manage tasksForMeManage = bymetasks_list.get(i);
-        myViewHolder.bymetasksName.setText(tasksForMeManage.getBymetasksName());
-        myViewHolder.bymeTasksDL.setText(tasksForMeManage.getBymeTasksDL());
-        myViewHolder.bymeTasksProject.setText(tasksForMeManage.getBymeTasksProject());
-        myViewHolder.bymeTasksTo.setText(tasksForMeManage.getBymeTasksTo());
+        final tasks_by_me_manage tasksByMeManage = bymetasks_list.get(i);
+        myViewHolder.bymetasksName.setText(tasksByMeManage.getBymetasksName());
+        myViewHolder.bymeTasksDL.setText(tasksByMeManage.getBymeTasksDL());
+        myViewHolder.bymeTasksProject.setText(tasksByMeManage.getBymeTasksProject());
+        myViewHolder.bymeTasksTo.setText(tasksByMeManage.getBymeTasksTo());
+
+        myViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(mContext, tasks_overview.class);
+                i.putExtra("tName", tasksByMeManage.getBymetasksName());
+                i.putExtra("tDL", tasksByMeManage.getBymeTasksDL());
+                i.putExtra("tProj", tasksByMeManage.getBymeTasksProject());
+                i.putExtra("tTo", tasksByMeManage.getBymeTasksTo());
+                mContext.startActivity(i);
+            }
+        });
 
     }
 

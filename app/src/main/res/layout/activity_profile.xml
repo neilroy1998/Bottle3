@@ -5,7 +5,8 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".homeFrag">
+    tools:context=".profileActivity"
+    android:background="@color/cod_gray">
 
     <TextView
         android:id="@+id/tv_overall2"
@@ -105,13 +106,16 @@
 
     <android.support.design.button.MaterialButton
         android:id="@+id/person_assign_task_btn"
-        android:layout_width="match_parent"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:onClick="person_assign_tasks"
-        android:text="Button"
+        android:text="Assign Tasks"
+        android:textAlignment="center"
+        android:textSize="18sp"
         app:backgroundTint="@android:color/transparent"
         app:cornerRadius="32dp"
         app:icon="@drawable/ic_playlist_add_check_white_24dp"

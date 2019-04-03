@@ -7,16 +7,24 @@
     android:layout_height="match_parent"
     tools:context=".tasksFrag">
 
-    <Button
+    <android.support.design.button.MaterialButton
         android:id="@+id/button_add_tasks"
         android:layout_width="57dp"
         android:layout_height="59dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/ic_add_white_24dp"
-        android:onClick="add_teams"
+        android:backgroundTint="@color/cod_gray"
+        android:icon="@drawable/ic_add_white_24dp"
+        android:iconTint="@color/white"
+        android:onClick="add_tasks"
+        app:backgroundTint="@android:color/transparent"
+        app:backgroundTintMode="src_in"
+        app:cornerRadius="32dp"
+        app:icon="@drawable/ic_add_white_24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/white"
+        app:strokeWidth="1dp" />
 
     <TextView
         android:id="@+id/tv_tasks"
@@ -42,11 +50,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_tasks"
+        app:tabBackground="@color/cod_gray"
         app:tabGravity="fill"
         app:tabIndicatorColor="@color/alto"
         app:tabMode="fixed"
-        app:tabTextColor="@color/white">
-    </android.support.design.widget.TabLayout>
+        app:tabTextColor="@color/white"></android.support.design.widget.TabLayout>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/tasks_viewPager"

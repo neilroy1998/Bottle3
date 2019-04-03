@@ -3,13 +3,22 @@ package com.example.bottle2;
 public class overview_members_manage {
 
     private int memID, memPrcnt, memImg;
-    private String memName;
+    private String memName, memDesc;
 
-    public overview_members_manage(int memID, int memPrcnt, int memImg, String memName) {
+    public overview_members_manage(int memID, int memPrcnt, int memImg, String memName, String memDesc) {
         this.memID = memID;
         this.memPrcnt = memPrcnt;
         this.memImg = memImg;
         this.memName = memName;
+        this.memDesc = memDesc;
+    }
+
+    public String getMemDesc() {
+        return memDesc;
+    }
+
+    public void setMemDesc(String memDesc) {
+        this.memDesc = memDesc;
     }
 
     public int getMemID() {

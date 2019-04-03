@@ -1,6 +1,7 @@
 package com.example.bottle2;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -35,6 +36,17 @@ public class tasks_for_me_adapter extends RecyclerView.Adapter<tasks_for_me_adap
         myViewHolder.formetasksName.setText(tasksForMeManage.getFormetasksName());
         myViewHolder.formeTasksDL.setText(tasksForMeManage.getFormeTasksDL());
         myViewHolder.formeTasksProject.setText(tasksForMeManage.getFormeTasksProject());
+
+        myViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(mContext, tasks_overview.class);
+                i.putExtra("tName", tasksForMeManage.getFormetasksName());
+                i.putExtra("tDL", tasksForMeManage.getFormeTasksDL());
+                i.putExtra("tProj", tasksForMeManage.getFormeTasksProject());
+                mContext.startActivity(i);
+            }
+        });
     }
 
     @Override

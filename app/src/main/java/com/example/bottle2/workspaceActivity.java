@@ -24,8 +24,6 @@ public class workspaceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workspace);
 
-        getSupportActionBar().hide();
-
         ws_rv = findViewById(R.id.workspace_rv);
         ws_list = new ArrayList<>();
         workspaceAdapter = new workspace_adapter(workspaceActivity.this, ws_list);

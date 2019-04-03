@@ -1,6 +1,7 @@
 package com.example.bottle2;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -31,12 +32,24 @@ public class overview_members_adapter extends RecyclerView.Adapter<overview_memb
     }
 
     @Override
-    public void onBindViewHolder(@NonNull overview_members_adapter.MyViewHolder myViewHolder, int i) {
+    public void onBindViewHolder(@NonNull final overview_members_adapter.MyViewHolder myViewHolder, int i) {
 
         final overview_members_manage overviewMembersManage = mem_List.get(i);
         myViewHolder.mem_name.setText(overviewMembersManage.getMemName());
         myViewHolder.mem_img.setImageResource(overviewMembersManage.getMemImg());
         myViewHolder.mem_prcnt.setText(Integer.toString(overviewMembersManage.getMemPrcnt()));
+
+        myViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(mContext, profileActivity.class);
+                i.putExtra("Mem_Name", overviewMembersManage.getMemName());
+                i.putExtra("Mem_Img", overviewMembersManage.getMemImg());
+                i.putExtra("Mem_Prcnt", Integer.toString(overviewMembersManage.getMemPrcnt()));
+                i.putExtra("Mem_Desc", overviewMembersManage.getMemDesc());
+                mContext.startActivity(i);
+            }
+        });
     }
 
     @Override

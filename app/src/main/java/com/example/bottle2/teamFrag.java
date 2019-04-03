@@ -75,6 +75,25 @@ public class teamFrag extends Fragment {
         tm = new team_manage(3, "Gamma", "The quick brown fox jumps over the lazy dog");
         team_list.add(tm);
 
+
+
+        tm = new team_manage(1, "Alpha", "I would have gotten the promotion, but my attendance wasn’t good enough");
+        team_list.add(tm);
+        tm = new team_manage(1, "Alpha", "I would have gotten the promotion, but my attendance wasn’t good enough");
+        team_list.add(tm);
+        tm = new team_manage(1, "Alpha", "I would have gotten the promotion, but my attendance wasn’t good enough");
+        team_list.add(tm);
+        tm = new team_manage(1, "Alpha", "I would have gotten the promotion, but my attendance wasn’t good enough");
+        team_list.add(tm);
+        tm = new team_manage(1, "Alpha", "I would have gotten the promotion, but my attendance wasn’t good enough");
+        team_list.add(tm);
+        tm = new team_manage(1, "Alpha", "I would have gotten the promotion, but my attendance wasn’t good enough");
+        team_list.add(tm);
+        tm = new team_manage(1, "Alpha", "I would have gotten the promotion, but my attendance wasn’t good enough");
+        team_list.add(tm);
+
+
+
         teamAdapter.notifyDataSetChanged();
 
     }

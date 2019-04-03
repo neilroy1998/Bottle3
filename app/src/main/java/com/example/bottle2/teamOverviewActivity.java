@@ -20,7 +20,6 @@ public class teamOverviewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_team_overview);
 
         ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
 
         teamID = getIntent().getExtras().getInt("teamID");
         teamName = getIntent().getExtras().getString("teamName");

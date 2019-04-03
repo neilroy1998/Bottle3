@@ -24,6 +24,7 @@
         android:foreground="?attr/selectableItemBackground"
         app:itemIconTint="@android:color/white"
         app:itemTextColor="@android:color/white"
-        app:menu="@menu/nav_menu" />
+        app:menu="@menu/nav_menu"
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"/>
 
 </android.support.design.widget.CoordinatorLayout>
