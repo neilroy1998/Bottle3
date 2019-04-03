@@ -1,11 +1,9 @@
 package com.example.bottle2;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
@@ -59,8 +57,8 @@ public class homeFrag extends Fragment {
         cat_list = new ArrayList<>();
         cat_adapter = new categories_adapter(getActivity(), cat_list);
 
-        CircleImageView civ = (CircleImageView) view.findViewById(R.id.team_image);
-        civ.setImageResource(R.drawable.profile);
+        CircleImageView civ = (CircleImageView) view.findViewById(R.id.my_image);
+        civ.setImageResource(R.drawable.fruit);
 
         RecyclerView.LayoutManager lm = new GridLayoutManager(getActivity(), 1);
         recyclerView.setLayoutManager(lm);

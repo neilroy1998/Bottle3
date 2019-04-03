@@ -7,7 +7,9 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.PopupMenu;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -19,10 +21,18 @@ public class workspaceActivity extends AppCompatActivity {
     private List<workspace_manage> ws_list;
     private workspace_adapter workspaceAdapter;
 
+    Button addWS;
+    TextView tvWS;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workspace);
+
+        addWS = findViewById(R.id.button_add_workspace);
+        tvWS = findViewById(R.id.tv_WS);
+
+        addWS.setWidth(tvWS.getWidth());
 
         ws_rv = findViewById(R.id.workspace_rv);
         ws_list = new ArrayList<>();
